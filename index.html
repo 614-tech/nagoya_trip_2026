@@ -23,251 +23,47 @@
   --pink: #A83060;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: 'Noto Sans TC', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  font-size: 15px;
-  line-height: 1.7;
-}
-.hero {
-  background: var(--text);
-  color: #FAF8F4;
-  padding: 60px 24px 50px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 40px,
-    rgba(255,255,255,0.015) 40px,
-    rgba(255,255,255,0.015) 41px
-  );
-}
-.hero-eyebrow {
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent2);
-  margin-bottom: 16px;
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 500;
-}
-.hero h1 {
-  font-family: 'Noto Serif TC', serif;
-  font-size: clamp(28px, 6vw, 42px);
-  font-weight: 700;
-  line-height: 1.3;
-  margin-bottom: 12px;
-  position: relative;
-}
-.hero-sub {
-  font-size: 14px;
-  color: rgba(250,248,244,0.6);
-  margin-bottom: 32px;
-}
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-  position: relative;
-}
-.hero-tag {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  color: rgba(250,248,244,0.85);
-  padding: 5px 14px;
-  border-radius: 100px;
-  font-size: 12px;
-}
-.flight-bar {
-  background: var(--accent);
-  color: white;
-  padding: 14px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  font-size: 13px;
-  font-weight: 500;
-}
-.flight-item { display: flex; align-items: center; gap: 8px; }
+body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.7; }
+.hero { background: var(--text); color: #FAF8F4; padding: 60px 24px 50px; text-align: center; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 41px); }
+.hero-eyebrow { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent2); margin-bottom: 16px; font-weight: 500; }
+.hero h1 { font-family: 'Noto Serif TC', serif; font-size: clamp(28px, 6vw, 42px); font-weight: 700; line-height: 1.3; margin-bottom: 12px; position: relative; }
+.hero-sub { font-size: 14px; color: rgba(250,248,244,0.6); margin-bottom: 32px; }
+.hero-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; position: relative; }
+.hero-tag { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(250,248,244,0.85); padding: 5px 14px; border-radius: 100px; font-size: 12px; }
+.flight-bar { background: var(--accent); color: white; padding: 14px 24px; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; font-size: 13px; font-weight: 500; }
 .flight-sep { opacity: 0.4; }
 .container { max-width: 800px; margin: 0 auto; padding: 0 16px; }
-.notice-box {
-  background: #FEF9EC;
-  border: 1px solid #F0D060;
-  border-left: 4px solid var(--gold);
-  border-radius: 8px;
-  padding: 16px 20px;
-  margin: 24px 0;
-}
-.notice-box h3 {
-  font-size: 13px;
-  font-weight: 700;
-  color: #7A5C00;
-  margin-bottom: 10px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
+.notice-box { background: #FEF9EC; border: 1px solid #F0D060; border-left: 4px solid var(--gold); border-radius: 8px; padding: 16px 20px; margin: 24px 0; }
+.notice-box h3 { font-size: 13px; font-weight: 700; color: #7A5C00; margin-bottom: 10px; letter-spacing: 0.05em; text-transform: uppercase; }
 .notice-items { display: flex; flex-direction: column; gap: 6px; }
-.notice-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 13px;
-  color: #5A4400;
-}
-.notice-num {
-  background: var(--gold);
-  color: white;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 700;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-.section-header {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 32px 0 16px;
-}
-.section-line {
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
-.section-label {
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text3);
-  font-weight: 500;
-  white-space: nowrap;
-}
-.day-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  margin-bottom: 12px;
-  overflow: hidden;
-  transition: box-shadow 0.2s;
-}
+.notice-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: #5A4400; }
+.notice-num { background: var(--gold); color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.section-header { display: flex; align-items: center; gap: 14px; padding: 32px 0 16px; }
+.section-line { flex: 1; height: 1px; background: var(--border); }
+.section-label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text3); font-weight: 500; white-space: nowrap; }
+.day-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; overflow: hidden; transition: box-shadow 0.2s; }
 .day-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
-.day-head {
-  padding: 14px 18px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  border-bottom: 1px solid var(--border);
-  cursor: pointer;
-  user-select: none;
-}
-.day-num {
-  font-family: 'Noto Serif TC', serif;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 100px;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
+.day-head { padding: 14px 18px; display: flex; align-items: center; gap: 14px; border-bottom: 1px solid var(--border); cursor: pointer; user-select: none; }
+.day-num { font-family: 'Noto Serif TC', serif; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 100px; white-space: nowrap; flex-shrink: 0; }
 .day-info { flex: 1; min-width: 0; }
-.day-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.3;
-}
-.day-desc {
-  font-size: 12px;
-  color: var(--text2);
-  margin-top: 2px;
-}
-.day-chevron {
-  font-size: 18px;
-  color: var(--text3);
-  transition: transform 0.25s;
-  flex-shrink: 0;
-}
+.day-title { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.3; }
+.day-desc { font-size: 12px; color: var(--text2); margin-top: 2px; }
+.day-chevron { font-size: 18px; color: var(--text3); transition: transform 0.25s; flex-shrink: 0; }
 .day-card.open .day-chevron { transform: rotate(180deg); }
 .day-body { display: none; padding: 4px 0 8px; }
 .day-card.open .day-body { display: block; }
-.item {
-  display: flex;
-  gap: 0;
-  padding: 0 18px;
-}
-.item-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 52px;
-  flex-shrink: 0;
-}
-.item-time {
-  font-size: 11px;
-  color: var(--text3);
-  font-weight: 500;
-  padding-top: 12px;
-  text-align: center;
-  line-height: 1.2;
-  min-height: 20px;
-}
-.item-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--border);
-  margin: 6px 0 0;
-  flex-shrink: 0;
-}
-.item-vline {
-  width: 1px;
-  background: var(--border);
-  flex: 1;
-  min-height: 8px;
-  margin-top: 4px;
-}
+.item { display: flex; gap: 0; padding: 0 18px; }
+.item-left { display: flex; flex-direction: column; align-items: center; width: 52px; flex-shrink: 0; }
+.item-time { font-size: 11px; color: var(--text3); font-weight: 500; padding-top: 12px; text-align: center; line-height: 1.2; min-height: 20px; }
+.item-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); margin: 6px 0 0; flex-shrink: 0; }
+.item-vline { width: 1px; background: var(--border); flex: 1; min-height: 8px; margin-top: 4px; }
 .item:last-child .item-vline { display: none; }
-.item-right {
-  flex: 1;
-  padding: 12px 0 12px 12px;
-  min-width: 0;
-}
-.item-label {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.4;
-}
-.item-note {
-  font-size: 12px;
-  color: var(--text2);
-  margin-top: 3px;
-  line-height: 1.5;
-}
+.item-right { flex: 1; padding: 12px 0 12px 12px; min-width: 0; }
+.item-label { font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.4; }
+.item-note { font-size: 12px; color: var(--text2); margin-top: 3px; line-height: 1.5; }
 .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
-.tag {
-  font-size: 10px;
-  font-weight: 500;
-  padding: 2px 8px;
-  border-radius: 100px;
-}
+.tag { font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 100px; }
 .tag-food { background: #FEF0E6; color: #933B10; }
 .tag-move { background: #F0EFE8; color: #4A4840; }
 .tag-stay { background: #FBE8F0; color: #7A1F45; }
@@ -279,168 +75,43 @@ body {
 .tag-fest { background: #FBF0C8; color: #5A3800; }
 .tag-sight { background: #EEF0FE; color: #2E2875; }
 .tag-rest { background: #F4F1EB; color: #5A5248; }
-.hotels-section {
-  margin: 32px 0;
-}
-.hotels-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
-.hotel-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 16px 18px;
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-}
-.hotel-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  flex-shrink: 0;
-}
+.weather-box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; margin: 8px 18px 4px; overflow: hidden; }
+.weather-tabs { display: flex; border-bottom: 1px solid var(--border); }
+.weather-tab { flex: 1; padding: 8px 12px; font-size: 12px; font-weight: 700; text-align: center; cursor: pointer; color: var(--text2); background: var(--surface2); transition: all 0.15s; }
+.weather-tab.active { background: var(--surface); color: var(--text); }
+.weather-tab:first-child { border-right: 1px solid var(--border); }
+.weather-plan { display: none; padding: 10px 14px; }
+.weather-plan.active { display: block; }
+.weather-row { display: flex; gap: 8px; margin-bottom: 5px; align-items: flex-start; font-size: 12px; }
+.weather-time { color: var(--text3); min-width: 44px; flex-shrink: 0; font-weight: 500; }
+.weather-content { color: var(--text); line-height: 1.5; }
+.hotels-section { margin: 32px 0; }
+.hotel-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; display: flex; gap: 14px; align-items: flex-start; margin-bottom: 12px; }
+.hotel-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
 .hotel-info { flex: 1; min-width: 0; }
-.hotel-period {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 4px;
-}
-.hotel-name {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.3;
-  margin-bottom: 4px;
-}
-.hotel-rec {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text);
-  margin-bottom: 3px;
-}
-.hotel-note {
-  font-size: 12px;
-  color: var(--text2);
-  line-height: 1.5;
-}
-.hotel-budget {
-  font-size: 12px;
-  font-weight: 700;
-  margin-top: 6px;
-}
-.tips-section {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px 20px;
-  margin: 24px 0;
-}
-.tips-title {
-  font-family: 'Noto Serif TC', serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--border);
-}
+.hotel-period { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+.hotel-name { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.3; margin-bottom: 4px; }
+.hotel-rec { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 3px; }
+.hotel-note { font-size: 12px; color: var(--text2); line-height: 1.5; }
+.hotel-budget { font-size: 12px; font-weight: 700; margin-top: 6px; }
+.tips-section { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 24px 0; }
+.tips-title { font-family: 'Noto Serif TC', serif; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
 .tips-group { margin-bottom: 16px; }
 .tips-group:last-child { margin-bottom: 0; }
-.tips-group-title {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-.tip-item {
-  display: flex;
-  gap: 10px;
-  font-size: 13px;
-  color: var(--text);
-  margin-bottom: 6px;
-  align-items: flex-start;
-  line-height: 1.6;
-}
-.tip-bullet {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent2);
-  flex-shrink: 0;
-  margin-top: 7px;
-}
-.food-section {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px;
-  margin: 24px 0;
-}
-.food-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 14px;
-}
-.food-item {
-  background: var(--surface2);
-  border-radius: 8px;
-  padding: 12px 14px;
-}
-.food-name {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 2px;
-}
-.food-desc {
-  font-size: 11px;
-  color: var(--text2);
-  line-height: 1.5;
-}
-.food-where {
-  font-size: 11px;
-  color: var(--accent);
-  font-weight: 500;
-  margin-top: 4px;
-}
-footer {
-  background: var(--text);
-  color: rgba(250,248,244,0.5);
-  text-align: center;
-  padding: 24px;
-  font-size: 12px;
-  margin-top: 48px;
-}
-.expand-all-btn {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 8px 16px;
-  font-size: 12px;
-  color: var(--text2);
-  cursor: pointer;
-  display: block;
-  margin: 0 auto 16px;
-  font-family: 'Noto Sans TC', sans-serif;
-  transition: background 0.15s;
-}
+.tips-group-title { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+.tip-item { display: flex; gap: 10px; font-size: 13px; color: var(--text); margin-bottom: 6px; align-items: flex-start; line-height: 1.6; }
+.tip-bullet { width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); flex-shrink: 0; margin-top: 7px; }
+.food-section { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 24px 0; }
+.food-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+.food-item { background: var(--surface2); border-radius: 8px; padding: 12px 14px; }
+.food-name { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.food-desc { font-size: 11px; color: var(--text2); line-height: 1.5; }
+.food-where { font-size: 11px; color: var(--accent); font-weight: 500; margin-top: 4px; }
+footer { background: var(--text); color: rgba(250,248,244,0.5); text-align: center; padding: 24px; font-size: 12px; margin-top: 48px; }
+.expand-all-btn { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px 16px; font-size: 12px; color: var(--text2); cursor: pointer; display: block; margin: 0 auto 16px; font-family: 'Noto Sans TC', sans-serif; transition: background 0.15s; }
 .expand-all-btn:hover { background: var(--surface2); }
-@media (max-width: 500px) {
-  .food-grid { grid-template-columns: 1fr; }
-  .flight-bar { gap: 12px; font-size: 12px; }
-}
+.sec-title { font-family: 'Noto Serif TC', serif; font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 14px; }
+@media (max-width: 500px) { .food-grid { grid-template-columns: 1fr; } .flight-bar { gap: 12px; font-size: 12px; } }
 </style>
 </head>
 <body>
@@ -460,9 +131,9 @@ footer {
 </div>
 
 <div class="flight-bar">
-  <div class="flight-item">✈️ 去程 JL8670・8/6（四）14:05 TPE → 17:55 NGO</div>
+  <div>✈️ 去程 JL8670・8/6（四）14:05 TPE → 17:55 NGO</div>
   <div class="flight-sep">｜</div>
-  <div class="flight-item">✈️ 回程 JL8671・8/15（六）10:40 NGO → 12:45 TPE</div>
+  <div>✈️ 回程 JL8671・8/15（六）10:40 NGO → 12:45 TPE</div>
 </div>
 
 <div class="container">
@@ -477,328 +148,164 @@ footer {
     </div>
   </div>
 
-  <!-- ===== DAY 1 ===== -->
-  <div class="section-header">
-    <div class="section-line"></div>
-    <div class="section-label">第一段・名古屋市區</div>
-    <div class="section-line"></div>
-  </div>
+  <div class="section-header"><div class="section-line"></div><div class="section-label">第一段・名古屋市區（8/6）</div><div class="section-line"></div></div>
 
   <button class="expand-all-btn" onclick="toggleAll()">全部展開 / 收合</button>
 
   <div class="day-card open">
     <div class="day-head" onclick="toggle(this)">
       <div class="day-num" style="background:#F0EFE8;color:#4A4840">Day 1</div>
-      <div class="day-info">
-        <div class="day-title">8/6（四）抵達名古屋</div>
-        <div class="day-desc">JL8670 17:55 落地・輕鬆開始</div>
-      </div>
+      <div class="day-info"><div class="day-title">8/6（四）抵達名古屋</div><div class="day-desc">JL8670 17:55 落地・輕鬆開始</div></div>
       <div class="day-chevron">▾</div>
     </div>
     <div class="day-body">
-      <div class="item">
-        <div class="item-left"><div class="item-time">18:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">μ-SKY 特急至名古屋站</div><div class="item-note">約28分・¥870/人・3歲以下免費・直達名古屋站</div><div class="tags"><span class="tag tag-move">交通</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">19:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">Check-in 名古屋站飯店</div><div class="item-note">8/6及8/8–8/11 共住6晚・嬰兒車友善・推薦站前5分內・詳見住宿建議</div><div class="tags"><span class="tag tag-stay">住宿</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">20:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">矢場とん 味噌カツ（エスカ地下街）</div><div class="item-note">名古屋站直結・1947年老舖・名古屋必吃第一彈・不用外出最方便</div><div class="tags"><span class="tag tag-food">美食</span></div></div>
-      </div>
+      <div class="item"><div class="item-left"><div class="item-time">18:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">μ-SKY 特急至名古屋站</div><div class="item-note">約28分・¥870/人・3歲以下免費</div><div class="tags"><span class="tag tag-move">交通</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">19:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">Check-in 名古屋站飯店</div><div class="item-note">8/6及8/8–8/13 共住7晚・嬰兒車友善・推薦站前5分內・詳見住宿建議</div><div class="tags"><span class="tag tag-stay">住宿</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">20:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">矢場とん 味噌カツ（エスカ地下街）</div><div class="item-note">名古屋站直結・1947年老舖・名古屋必吃第一彈・抵達當晚最方便</div><div class="tags"><span class="tag tag-food">美食</span></div></div></div>
     </div>
   </div>
 
-  <!-- ===== DAY 2 ===== -->
-  <div class="section-header">
-    <div class="section-line"></div>
-    <div class="section-label">第二段・樂高飯店（8/7–8/8）</div>
-    <div class="section-line"></div>
-  </div>
+  <div class="section-header"><div class="section-line"></div><div class="section-label">第二段・樂高飯店（8/7–8/8）</div><div class="section-line"></div></div>
 
   <div class="day-card open">
     <div class="day-head" onclick="toggle(this)">
       <div class="day-num" style="background:#E3F5EE;color:#0A5035">Day 2</div>
-      <div class="day-info">
-        <div class="day-title">8/7（五）樂高樂園 Day 1</div>
-        <div class="day-desc">平日・人潮最少・10:00–18:00</div>
-      </div>
+      <div class="day-info"><div class="day-title">8/7（五）樂高樂園 Day 1</div><div class="day-desc">平日・全年人潮最少・10:00–18:00</div></div>
       <div class="day-chevron">▾</div>
     </div>
     <div class="day-body">
-      <div class="item">
-        <div class="item-left"><div class="item-time">08:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">青波線至金城埠頭・Check-in 樂高飯店</div><div class="item-note">行李寄放後入場・2日套票含早餐・住客專屬入口・樂高主題房間</div><div class="tags"><span class="tag tag-stay">住宿</span><span class="tag tag-move">交通</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">10:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">開園即衝・樂高樂園</div><div class="item-note">平日等候時間短・先搶飛龍雲霄飛車、駕駛學校、LEGO NINJAGO</div><div class="tags"><span class="tag tag-lego">樂園</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">12:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">園內午餐＋寶寶午睡</div><div class="item-note">避開午間尖峰（11–13時最擠）・提早或延後用餐</div><div class="tags"><span class="tag tag-food">美食</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">14:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">繼續玩到 18:00 關園</div><div class="item-note">平日人少・排隊短・輕鬆玩遍各區</div><div class="tags"><span class="tag tag-lego">樂園</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">18:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">住客限定：溫水泳池＋創意工坊</div><div class="item-note">需提前預約・1歲寶寶玩水超開心・6歲創意工坊最愛・樂高主題晚餐</div><div class="tags"><span class="tag tag-stay">住宿</span></div></div>
-      </div>
+      <div class="item"><div class="item-left"><div class="item-time">08:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">青波線至金城埠頭・Check-in 樂高飯店</div><div class="item-note">行李寄放後入場・2日套票含早餐・樂高主題房間</div><div class="tags"><span class="tag tag-stay">住宿</span><span class="tag tag-move">交通</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">10:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">開園即衝・樂高樂園</div><div class="item-note">平日等候時間短・先搶飛龍雲霄飛車、駕駛學校、LEGO NINJAGO</div><div class="tags"><span class="tag tag-lego">樂園</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">12:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">園內午餐＋寶寶午睡</div><div class="item-note">避開午間尖峰（11–13時最擠）・提早或延後用餐</div><div class="tags"><span class="tag tag-food">美食</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">14:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">繼續玩到 18:00 關園</div><div class="item-note">平日人少・排隊短・輕鬆玩遍各區</div><div class="tags"><span class="tag tag-lego">樂園</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">18:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">住客限定：溫水泳池＋創意工坊</div><div class="item-note">需提前預約・1歲寶寶玩水超開心・6歲創意工坊最愛・樂高主題晚餐</div><div class="tags"><span class="tag tag-stay">住宿</span></div></div></div>
     </div>
   </div>
 
   <div class="day-card open">
     <div class="day-head" onclick="toggle(this)">
       <div class="day-num" style="background:#E3F5EE;color:#0A5035">Day 3</div>
-      <div class="day-info">
-        <div class="day-title">8/8（六）樂高樂園 Day 2</div>
-        <div class="day-desc">週六・Early Entry・玩到關園→回名古屋</div>
-      </div>
+      <div class="day-info"><div class="day-title">8/8（六）樂高樂園 Day 2</div><div class="day-desc">週六・Early Entry・玩到關園→回名古屋</div></div>
       <div class="day-chevron">▾</div>
     </div>
     <div class="day-body">
-      <div class="item">
-        <div class="item-left"><div class="item-time">07:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">飯店豐盛早餐自助吧</div><div class="item-note">樂高主題餐廳・名古屋在地食材・小孩超愛</div><div class="tags"><span class="tag tag-food">美食</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">09:45</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">Early Entry・住客專屬入口提前入場</div><div class="item-note">比一般遊客早15分・黃金時段先衝熱門設施・可備Skip Pass（¥4,500/3設施）</div><div class="tags"><span class="tag tag-lego">樂園</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">12:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">午餐＋SEA LIFE 名古屋水族館</div><div class="item-note">飯店走路可達・避開午間人潮・1歲看魚超開心・附在樂高套票內</div><div class="tags"><span class="tag tag-aqua">水族館</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">15:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">回樂園玩到 18:00 關園</div><div class="item-note">下午人潮稍退・趁機攻略剩餘設施</div><div class="tags"><span class="tag tag-lego">樂園</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">18:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">Check-out・青波線→回名古屋站飯店</div><div class="item-note">約40分・晚餐隨意・早點休息</div><div class="tags"><span class="tag tag-move">交通</span></div></div>
-      </div>
+      <div class="item"><div class="item-left"><div class="item-time">07:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">飯店豐盛早餐自助吧</div><div class="item-note">樂高主題餐廳・名古屋在地食材・小孩超愛</div><div class="tags"><span class="tag tag-food">美食</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">09:45</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">Early Entry・住客專屬入口提前入場</div><div class="item-note">比一般遊客早15分・黃金時段先衝熱門設施・可備Skip Pass（¥4,500/3設施）</div><div class="tags"><span class="tag tag-lego">樂園</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">12:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">午餐＋SEA LIFE 名古屋水族館</div><div class="item-note">飯店走路可達・避開午間人潮・1歲看魚超開心</div><div class="tags"><span class="tag tag-aqua">水族館</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">15:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">回樂園玩到 18:00 關園</div><div class="item-note">下午人潮稍退・趁機攻略剩餘設施</div><div class="tags"><span class="tag tag-lego">樂園</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">18:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">Check-out・青波線→回名古屋站飯店</div><div class="item-note">約40分・晚餐隨意・早點休息</div><div class="tags"><span class="tag tag-move">交通</span></div></div></div>
     </div>
   </div>
 
-  <!-- ===== DAY 4–7 名古屋市區 ===== -->
-  <div class="section-header">
-    <div class="section-line"></div>
-    <div class="section-label">第三段・名古屋市區（8/9–8/12）</div>
-    <div class="section-line"></div>
-  </div>
+  <div class="section-header"><div class="section-line"></div><div class="section-label">第三段・名古屋市區（8/9–8/12）</div><div class="section-line"></div></div>
 
   <div class="day-card open">
     <div class="day-head" onclick="toggle(this)">
       <div class="day-num" style="background:#E5F3FC;color:#0A3F6A">Day 4</div>
-      <div class="day-info">
-        <div class="day-title">8/9（日）名古屋港水族館＋大盆踊り</div>
-        <div class="day-desc">盆踊り第一天・氣氛最熱鬧</div>
-      </div>
+      <div class="day-info"><div class="day-title">8/9（日）名古屋港水族館＋大盆踊り</div><div class="day-desc">盆踊り第一天・氣氛最熱鬧</div></div>
       <div class="day-chevron">▾</div>
     </div>
     <div class="day-body">
-      <div class="item">
-        <div class="item-left"><div class="item-time">08:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">喫茶リッチ 名古屋モーニング</div><div class="item-note">エスカ地下街・朝7時開店・小倉トースト+ゆで卵・只需支付咖啡錢・名古屋早餐文化體驗</div><div class="tags"><span class="tag tag-food">美食</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">09:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">名古屋港水族館 開館即入場</div><div class="item-note">地鐵名城線・名古屋港站步行5分・暑假期間9:30–20:00・建議Klook預購</div><div class="tags"><span class="tag tag-aqua">水族館</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">10:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">虎鯨・海豚・白鯨表演</div><div class="item-note">日本最大屋外表演池・6歲必看・沙丁魚龍捲風・企鵝館</div><div class="tags"><span class="tag tag-aqua">水族館</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">13:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">JETTY 商場午餐＋寶寶午睡</div><div class="item-note">水族館旁・有哺乳室與換尿布台・讓1歲睡午覺</div><div class="tags"><span class="tag tag-food">美食</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">16:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">返回市區・換裝準備盆踊り</div><div class="item-note">可在大須或名古屋站買浴衣・也可租借</div><div class="tags"><span class="tag tag-move">交通</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">18:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">名古屋城 大盆踊り大会</div><div class="item-note">天守閣打燈為背景・小學生以下免費入場・浴衣著付けサービス¥1,500・18–20點・帶小孩一起跳盆踊り</div><div class="tags"><span class="tag tag-fest">祭典</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">20:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">世界の山ちゃん 手羽先</div><div class="item-note">盆踊り後就近吃・幻のコショウ手羽先・大人的犒賞・名古屋名物第二彈</div><div class="tags"><span class="tag tag-food">美食</span></div></div>
-      </div>
+      <div class="item"><div class="item-left"><div class="item-time">08:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">喫茶リッチ 名古屋モーニング</div><div class="item-note">エスカ地下街・朝7時開店・小倉トースト+ゆで卵・咖啡代即附贈早餐</div><div class="tags"><span class="tag tag-food">美食</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">09:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">名古屋港水族館 開館即入場</div><div class="item-note">地鐵名城線・名古屋港站步行5分・9:30–20:00・建議Klook預購</div><div class="tags"><span class="tag tag-aqua">水族館</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">10:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">虎鯨・海豚・白鯨表演</div><div class="item-note">日本最大屋外表演池・6歲必看・沙丁魚龍捲風・企鵝館</div><div class="tags"><span class="tag tag-aqua">水族館</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">13:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">JETTY 商場午餐＋寶寶午睡</div><div class="item-note">水族館旁・有哺乳室・讓1歲睡午覺</div><div class="tags"><span class="tag tag-food">美食</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">16:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">返回市區・換裝準備盆踊り</div><div class="item-note">可在大須或名古屋站買浴衣・也可租借</div><div class="tags"><span class="tag tag-move">交通</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">18:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">名古屋城 大盆踊り大会</div><div class="item-note">天守閣打燈為背景・小學生以下免費・浴衣著付け¥1,500・18–20點</div><div class="tags"><span class="tag tag-fest">祭典</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">20:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">世界の山ちゃん 手羽先</div><div class="item-note">幻のコショウ手羽先・大人的犒賞・名古屋名物第二彈</div><div class="tags"><span class="tag tag-food">美食</span></div></div></div>
     </div>
   </div>
 
   <div class="day-card open">
     <div class="day-head" onclick="toggle(this)">
       <div class="day-num" style="background:#EEF0FE;color:#2E2875">Day 5</div>
-      <div class="day-info">
-        <div class="day-title">8/10（一）吉卜力公園</div>
-        <div class="day-desc">普通週一・平日最舒適・全程帶推車</div>
-      </div>
+      <div class="day-info"><div class="day-title">8/10（一）吉卜力公園</div><div class="day-desc">普通週一・平日最舒適・全程帶推車</div></div>
       <div class="day-chevron">▾</div>
     </div>
     <div class="day-body">
-      <div class="item">
-        <div class="item-left"><div class="item-time">09:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">地鐵東山線→リニモ 至吉卜力公園</div><div class="item-note">名古屋站出發約50分・愛・地球博記念公園站下車・票已在Klook買好</div><div class="tags"><span class="tag tag-move">交通</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">10:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">吉卜力公園 入場</div><div class="item-note">1歲免費・6歲能玩ネコバス、どんどこ堂・大倉庫棟大人必看・全程帶推車・注意補水防曬</div><div class="tags"><span class="tag tag-play">樂園</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">12:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">園區午餐＋寶寶午睡</div><div class="item-note">園內有餐廳・樹蔭多・讓寶寶在推車睡・大人輪流休息</div><div class="tags"><span class="tag tag-food">美食</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">15:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">返回名古屋市區</div><div class="item-note">リニモ→地鐵東山線・約50分</div><div class="tags"><span class="tag tag-move">交通</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">17:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">コーヒーハウスかこ 花車本店 下午茶</div><div class="item-note">名古屋老舖喫茶・小倉トースト・大人放鬆片刻</div><div class="tags"><span class="tag tag-food">美食</span></div></div>
-      </div>
+      <div class="item"><div class="item-left"><div class="item-time">09:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">地鐵東山線→リニモ 至吉卜力公園</div><div class="item-note">名古屋站出發約50分・愛・地球博記念公園站下車</div><div class="tags"><span class="tag tag-move">交通</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">10:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">吉卜力公園 入場</div><div class="item-note">1歲免費・6歲玩ネコバス、どんどこ堂・大倉庫棟大人必看・全程帶推車・注意補水防曬</div><div class="tags"><span class="tag tag-play">樂園</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">12:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">園區午餐＋寶寶午睡</div><div class="item-note">園內有餐廳・樹蔭多・讓寶寶在推車睡</div><div class="tags"><span class="tag tag-food">美食</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">15:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">返回名古屋市區</div><div class="item-note">リニモ→地鐵東山線・約50分</div><div class="tags"><span class="tag tag-move">交通</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">17:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">コーヒーハウスかこ 花車本店 下午茶</div><div class="item-note">名古屋老舖喫茶・小倉トースト・大人放鬆片刻</div><div class="tags"><span class="tag tag-food">美食</span></div></div></div>
     </div>
   </div>
 
   <div class="day-card open">
     <div class="day-head" onclick="toggle(this)">
       <div class="day-num" style="background:#FBF0C8;color:#5A3800">Day 6</div>
-      <div class="day-info">
-        <div class="day-title">8/11（二・山の日）名古屋城＋大須＋ひつまぶし</div>
-        <div class="day-desc">祝日・市區輕鬆逛・不去人擠人的地方</div>
-      </div>
+      <div class="day-info"><div class="day-title">8/11（二・山の日）名古屋城＋大須＋ひつまぶし</div><div class="day-desc">祝日・市區輕鬆逛</div></div>
       <div class="day-chevron">▾</div>
     </div>
     <div class="day-body">
-      <div class="item">
-        <div class="item-left"><div class="item-time">10:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">名古屋城 入場</div><div class="item-note">本丸御殿・金のしゃちほこ・推車可入場・夏祭期間延長至20:30・與盆踊り是同一個地點</div><div class="tags"><span class="tag tag-sight">景點</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">12:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">まるや本店 名駅店 ひつまぶし</div><div class="item-note">名古屋站直結・已用Tablecheck訂位・一半サイズ可分享・三吃體驗：原味→薬味→出汁茶漬け</div><div class="tags"><span class="tag tag-food">美食</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">14:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">大須商店街 食べ歩き</div><div class="item-note">元祖味噌から揚げ・いちご飴・李さん台灣屋台・古著雜貨・拱廊遮陽防曬・約1,200間店</div><div class="tags"><span class="tag tag-shop">購物</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">17:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">返飯店休息・整理行李</div><div class="item-note">明日出發下呂・只帶1–2天換洗衣物・大件行李留飯店寄放（フロントに預ける）</div><div class="tags"><span class="tag tag-stay">住宿</span></div></div>
-      </div>
+      <div class="item"><div class="item-left"><div class="item-time">10:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">名古屋城 入場</div><div class="item-note">本丸御殿・金のしゃちほこ・推車可入場・夏祭期間延長至20:30</div><div class="tags"><span class="tag tag-sight">景點</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">12:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">まるや本店 名駅店 ひつまぶし</div><div class="item-note">名古屋站直結・Tablecheck訂位・一半サイズ可分享・三吃體驗：原味→薬味→出汁茶漬け</div><div class="tags"><span class="tag tag-food">美食</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">14:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">大須商店街 食べ歩き</div><div class="item-note">元祖味噌から揚げ・いちご飴・李さん台灣屋台・古著雜貨・拱廊遮陽防曬</div><div class="tags"><span class="tag tag-shop">購物</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">17:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">返飯店休息・整理行李</div><div class="item-note">明日出發下呂・只帶1–2天換洗衣物・大件行李留飯店寄放</div><div class="tags"><span class="tag tag-stay">住宿</span></div></div></div>
     </div>
   </div>
 
   <div class="day-card open">
     <div class="day-head" onclick="toggle(this)">
       <div class="day-num" style="background:#F0EFE8;color:#4A4840">Day 7</div>
-      <div class="day-info">
-        <div class="day-title">8/12（三）輕鬆半天→下呂溫泉</div>
-        <div class="day-desc">上午市區休息・下午出發下呂</div>
-      </div>
+      <div class="day-info"><div class="day-title">8/12（三）輕鬆半天→下呂溫泉</div><div class="day-desc">上午市區休息・下午出發下呂</div></div>
       <div class="day-chevron">▾</div>
     </div>
     <div class="day-body">
-      <div class="item">
-        <div class="item-left"><div class="item-time">上午</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">飯店休息・寶寶自由活動</div><div class="item-note">這幾天累積疲勞・不安排景點・大人輪流補眠</div><div class="tags"><span class="tag tag-rest">休息</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">12:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">名古屋站周邊午餐</div><div class="item-note">きしめん・味噌煮込みうどん・輕鬆吃</div><div class="tags"><span class="tag tag-food">美食</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">13:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">JR 高山本線 特急ひだ → 下呂溫泉</div><div class="item-note">名古屋站出發・約1小時45分・沿途飛驒川美景・抱著寶寶坐指定席很舒服</div><div class="tags"><span class="tag tag-move">交通</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">15:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">下呂溫泉旅館 Check-in</div><div class="item-note">一泊二食・先泡個湯再吃晚餐・日本三大名泉・碳酸氫鈉泉・肌膚光滑</div><div class="tags"><span class="tag tag-onsen">溫泉</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">18:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">旅館會席料理晚餐</div><div class="item-note">飛驒牛・岩魚・山菜・懷石料理・大人最期待的一餐</div><div class="tags"><span class="tag tag-food">美食</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">20:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">夜晚露天風呂</div><div class="item-note">飛驒川沿岸・星空下泡湯・大人好好享受・1歲寶寶可用家庭浴室</div><div class="tags"><span class="tag tag-onsen">溫泉</span></div></div>
-      </div>
+      <div class="item"><div class="item-left"><div class="item-time">上午</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">飯店休息・寶寶自由活動</div><div class="item-note">累積疲勞・不安排景點・大人輪流補眠</div><div class="tags"><span class="tag tag-rest">休息</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">12:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">名古屋站周邊午餐</div><div class="item-note">きしめん・味噌煮込みうどん・輕鬆吃</div><div class="tags"><span class="tag tag-food">美食</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">13:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">JR 高山本線 特急ひだ → 下呂溫泉</div><div class="item-note">名古屋站出發・約1小時45分・沿途飛驒川美景・請買指定席</div><div class="tags"><span class="tag tag-move">交通</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">15:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">下呂溫泉旅館 Check-in・先泡湯</div><div class="item-note">一泊二食・日本三大名泉・碳酸氫鈉泉・肌膚光滑</div><div class="tags"><span class="tag tag-onsen">溫泉</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">18:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">旅館會席料理晚餐</div><div class="item-note">飛驒牛・岩魚・山菜・懷石料理・大人最期待的一餐</div><div class="tags"><span class="tag tag-food">美食</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">20:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">夜晚露天風呂</div><div class="item-note">飛驒川沿岸・星空下泡湯・1歲可用家庭浴室・大人好好享受</div><div class="tags"><span class="tag tag-onsen">溫泉</span></div></div></div>
     </div>
   </div>
 
-  <!-- ===== 下呂 ===== -->
-  <div class="section-header">
-    <div class="section-line"></div>
-    <div class="section-label">第四段・下呂溫泉（8/12–8/13）</div>
-    <div class="section-line"></div>
-  </div>
+  <div class="section-header"><div class="section-line"></div><div class="section-label">第四段・下呂溫泉（8/12–8/13）</div><div class="section-line"></div></div>
 
   <div class="day-card open">
     <div class="day-head" onclick="toggle(this)">
       <div class="day-num" style="background:#FCE8E8;color:#701515">Day 8</div>
-      <div class="day-info">
-        <div class="day-title">8/13（四）下呂溫泉悠哉日</div>
-        <div class="day-desc">盂蘭盆節・不趕時間・盡情享受</div>
-      </div>
+      <div class="day-info"><div class="day-title">8/13（四）下呂溫泉悠哉日</div><div class="day-desc">盂蘭盆節・不趕時間・盡情享受</div></div>
       <div class="day-chevron">▾</div>
     </div>
     <div class="day-body">
-      <div class="item">
-        <div class="item-left"><div class="item-time">06:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">朝風呂・旅館早餐</div><div class="item-note">早起泡湯最舒服・清晨無人最安靜・早餐後散步溫泉街</div><div class="tags"><span class="tag tag-onsen">溫泉</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">10:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">下呂溫泉街散步</div><div class="item-note">噴泉足湯（免費）・下呂溫泉合掌村・溫泉卵・飛驒牛串燒・伴手禮採購</div><div class="tags"><span class="tag tag-shop">購物</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">12:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">溫泉街午餐</div><div class="item-note">飛驒牛料理・みたらし糰子・下呂プリン・溫泉饅頭</div><div class="tags"><span class="tag tag-food">美食</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">14:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">Check-out・特急ひだ → 名古屋</div><div class="item-note">約1小時45分・回名古屋站飯店取大行李</div><div class="tags"><span class="tag tag-move">交通</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">16:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">回名古屋站飯店取大行李</div><div class="item-note">入住最後兩晚・名古屋最後晚餐自由選擇</div><div class="tags"><span class="tag tag-stay">住宿</span></div></div>
-      </div>
+      <div class="item"><div class="item-left"><div class="item-time">06:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">朝風呂・旅館早餐</div><div class="item-note">清晨無人最安靜・早起泡湯是人生享受</div><div class="tags"><span class="tag tag-onsen">溫泉</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">10:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">下呂溫泉街散步</div><div class="item-note">噴泉足湯（免費）・合掌村・溫泉卵・飛驒牛串燒・伴手禮</div><div class="tags"><span class="tag tag-shop">購物</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">12:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">溫泉街午餐</div><div class="item-note">飛驒牛料理・みたらし糰子・下呂プリン・溫泉饅頭</div><div class="tags"><span class="tag tag-food">美食</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">14:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">Check-out・特急ひだ → 名古屋</div><div class="item-note">約1小時45分・回名古屋站飯店取大行李</div><div class="tags"><span class="tag tag-move">交通</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">16:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">回名古屋站飯店取大行李・最後兩晚</div><div class="item-note">晚餐自由選擇・還沒吃到的名古屋名物都可以補</div><div class="tags"><span class="tag tag-stay">住宿</span></div></div></div>
     </div>
   </div>
 
-  <!-- ===== 收尾 ===== -->
-  <div class="section-header">
-    <div class="section-line"></div>
-    <div class="section-label">第五段・名古屋收尾（8/14–8/15）</div>
-    <div class="section-line"></div>
-  </div>
+  <div class="section-header"><div class="section-line"></div><div class="section-label">第五段・名古屋收尾（8/14–8/15）</div><div class="section-line"></div></div>
 
   <div class="day-card open">
     <div class="day-head" onclick="toggle(this)">
       <div class="day-num" style="background:#F0EFE8;color:#4A4840">Day 9</div>
-      <div class="day-info">
-        <div class="day-title">8/14（五）採購收尾</div>
-        <div class="day-desc">輕鬆半天・明早搭機</div>
-      </div>
+      <div class="day-info"><div class="day-title">8/14（五）購物＋挖寶・看天氣決定</div><div class="day-desc">晴天→港區路線・雨天→名古屋站室內路線</div></div>
       <div class="day-chevron">▾</div>
     </div>
     <div class="day-body">
-      <div class="item">
-        <div class="item-left"><div class="item-time">上午</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">名古屋站周邊最後採購</div><div class="item-note">高島屋・大丸地下食品樓・ぴよりん（名古屋限定雞造型布丁）・赤福・味噌系伴手禮・小倉あん</div><div class="tags"><span class="tag tag-shop">購物</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">12:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">JR名古屋站ホーム きしめん住よし</div><div class="item-note">月台上立食・名古屋收尾必吃・簡單快速・名古屋名物第四彈</div><div class="tags"><span class="tag tag-food">美食</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">14:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">飯店休息・整理行李・早點就寢</div><div class="item-note">明早08:00出發機場・確認行李重量・護照機票備妥</div><div class="tags"><span class="tag tag-stay">住宿</span></div></div>
+      <div class="weather-box">
+        <div class="weather-tabs">
+          <div class="weather-tab active" onclick="switchWeather(this,'sunny')">☀️ 晴天路線</div>
+          <div class="weather-tab" onclick="switchWeather(this,'rainy')">🌧 雨天路線</div>
+        </div>
+        <div class="weather-plan active" id="plan-sunny">
+          <div class="weather-row"><div class="weather-time">10:00</div><div class="weather-content">青波線→稲永駅・<strong>BOOKOFF SUPER BAZAAR</strong>・二手書、CD、漫畫、遊戲・推車友善大空間・隨意挖寶</div></div>
+          <div class="weather-row"><div class="weather-time">12:00</div><div class="weather-content">搭一站→金城埠頭・<strong>Maker's Pier</strong> 午餐＋散步・免費入場・食品サンプル體驗工坊・每整點噴水音樂秀</div></div>
+          <div class="weather-row"><div class="weather-time">14:00</div><div class="weather-content"><strong>リニア・鉄道館</strong>（選擇性・¥1,000）・新幹線博物館・6歲喜歡車車必看</div></div>
+          <div class="weather-row"><div class="weather-time">16:30</div><div class="weather-content">青波線回名古屋站（約24分）・タカシマヤゲートタワーモール＋高島屋地下 採購伴手禮</div></div>
+          <div class="weather-row"><div class="weather-time">19:00</div><div class="weather-content">きしめん住よし（JR月台立食）・名古屋最後一餐・整理行李・早點休息</div></div>
+        </div>
+        <div class="weather-plan" id="plan-rainy">
+          <div class="weather-row"><div class="weather-time">10:00</div><div class="weather-content">タカシマヤゲートタワーモール・服飾雜貨採購・全程室內不淋雨</div></div>
+          <div class="weather-row"><div class="weather-time">12:00</div><div class="weather-content">高島屋地下美食・午餐・名古屋名物補完計畫</div></div>
+          <div class="weather-row"><div class="weather-time">13:30</div><div class="weather-content"><strong>キドキド ボーネルンド</strong>（タカシマヤゲートタワーモール內）・6か月–小學生室內遊戲場・1歲6歲都能玩・大人坐旁邊喝咖啡休息・出發前一晚充電最好</div></div>
+          <div class="weather-row"><div class="weather-time">15:30</div><div class="weather-content">伴手禮最後採購・ぴよりん、赤福、味噌系・高島屋地下食品樓</div></div>
+          <div class="weather-row"><div class="weather-time">17:30</div><div class="weather-content">高島屋餐廳樓晚餐・整理行李・早點休息</div></div>
+        </div>
       </div>
     </div>
   </div>
@@ -806,169 +313,106 @@ footer {
   <div class="day-card open">
     <div class="day-head" onclick="toggle(this)">
       <div class="day-num" style="background:#F0EFE8;color:#4A4840">Day 10</div>
-      <div class="day-info">
-        <div class="day-title">8/15（六）返台</div>
-        <div class="day-desc">JL8671 10:40 NGO → 12:45 TPE</div>
-      </div>
+      <div class="day-info"><div class="day-title">8/15（六）返台</div><div class="day-desc">JL8671 10:40 NGO → 12:45 TPE</div></div>
       <div class="day-chevron">▾</div>
     </div>
     <div class="day-body">
-      <div class="item">
-        <div class="item-left"><div class="item-time">07:30</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">早餐・退房</div><div class="item-note">確認所有行李・貴重物品放隨身包</div><div class="tags"><span class="tag tag-food">美食</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">08:00</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">μ-SKY 特急至中部國際機場 T1</div><div class="item-note">約28分・08:00出發剛好・10:40起飛前2小時到・JAL值機報到</div><div class="tags"><span class="tag tag-move">交通</span></div></div>
-      </div>
-      <div class="item">
-        <div class="item-left"><div class="item-time">10:40</div><div class="item-dot"></div><div class="item-vline"></div></div>
-        <div class="item-right"><div class="item-label">起飛・12:45 抵達桃園T2</div><div class="item-note">平安返台！</div><div class="tags"><span class="tag tag-move">交通</span></div></div>
-      </div>
+      <div class="item"><div class="item-left"><div class="item-time">07:30</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">早餐・退房</div><div class="item-note">確認所有行李・護照機票備妥</div><div class="tags"><span class="tag tag-food">美食</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">08:00</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">μ-SKY 特急至中部國際機場 T1</div><div class="item-note">約28分・08:00出發・10:40起飛前剛好2小時到</div><div class="tags"><span class="tag tag-move">交通</span></div></div></div>
+      <div class="item"><div class="item-left"><div class="item-time">10:40</div><div class="item-dot"></div><div class="item-vline"></div></div><div class="item-right"><div class="item-label">起飛・12:45 抵達桃園T2・平安回家！</div><div class="item-note"></div><div class="tags"><span class="tag tag-move">交通</span></div></div></div>
     </div>
   </div>
 
-  <!-- ===== 住宿建議 ===== -->
-  <div class="section-header">
-    <div class="section-line"></div>
-    <div class="section-label">住宿建議</div>
-    <div class="section-line"></div>
-  </div>
+  <div class="section-header"><div class="section-line"></div><div class="section-label">住宿建議</div><div class="section-line"></div></div>
 
-  <div class="hotels-section">
-    <div class="hotels-grid">
-
-      <div class="hotel-card">
-        <div class="hotel-icon" style="background:#F0EFE8;">🏨</div>
-        <div class="hotel-info">
-          <div class="hotel-period" style="color:#C8632A">8/6・8/8–8/13・共7晚・名古屋市區</div>
-          <div class="hotel-name">名古屋站周邊飯店</div>
-          <div class="hotel-rec">推薦：コンフォートホテル名古屋名駅南</div>
-          <div class="hotel-note">名古屋站步行約8分・小學生以下添い寝無料・朝食免費・乾淨整潔・CP值高。備選：名古屋プリンスホテルスカイタワー（站前5分・嬰兒車友善）或ダイワロイネットホテル名古屋太閤通口（站前4分・浴室乾濕分離）。</div>
-          <div class="hotel-budget" style="color:#C8632A">每晚約 ¥6,000–8,000（雙人房）</div>
-        </div>
-      </div>
-
-      <div class="hotel-card">
-        <div class="hotel-icon" style="background:#E3F5EE;">🧱</div>
-        <div class="hotel-info">
-          <div class="hotel-period" style="color:#0A5035">8/7–8/8・1晚・樂高樂園</div>
-          <div class="hotel-name">LEGOLAND® Japan Hotel</div>
-          <div class="hotel-rec">官方唯一指定・必住體驗</div>
-          <div class="hotel-note">含早餐自助吧＋2日入場券套票・住客専用Early Entry・溫水泳池・創意工坊・樂高主題客房。1歲寶寶免費、6歲小孩在房間會驚喜尖叫。暑假必提前訂，售罄即無。</div>
-          <div class="hotel-budget" style="color:#0A5035">2日套票含早餐約 ¥50,000–70,000（整間房）</div>
-        </div>
-      </div>
-
-      <div class="hotel-card">
-        <div class="hotel-icon" style="background:#FCE8E8;">♨️</div>
-        <div class="hotel-info">
-          <div class="hotel-period" style="color:#701515">8/12–8/13・1晚・下呂溫泉</div>
-          <div class="hotel-name">下呂溫泉旅館</div>
-          <div class="hotel-rec">推薦：水明館 或 下呂彩朝楽</div>
-          <div class="hotel-note">水明館：飛驒川沿岸・展望露天風呂・設施齊全・有兒童餐。下呂彩朝楽：含兒童遊戲室・自助晚餐・貸切風呂・1歲寶寶帶著泡最方便。兩者皆有幼兒餐具與設備。一泊二食約每人¥15,000–25,000，訂房請上じゃらん（jalan.net），有中文介面。</div>
-          <div class="hotel-budget" style="color:#701515">一泊二食 約 ¥30,000–45,000（兩大人，小孩另計）</div>
-        </div>
-      </div>
-
+  <div class="hotel-card">
+    <div class="hotel-icon" style="background:#F0EFE8;">🏨</div>
+    <div class="hotel-info">
+      <div class="hotel-period" style="color:#C8632A">8/6・8/8–8/13・共7晚・名古屋市區</div>
+      <div class="hotel-name">名古屋站周邊飯店</div>
+      <div class="hotel-rec">推薦：コンフォートホテル名古屋名駅南</div>
+      <div class="hotel-note">名古屋站步行約8分・小學生以下添い寝無料・朝食免費・乾淨整潔・CP值高。備選：名古屋プリンスホテルスカイタワー（站前5分・嬰兒車友善）或ダイワロイネットホテル名古屋太閤通口（站前4分・浴室乾濕分離）。</div>
+      <div class="hotel-budget" style="color:#C8632A">每晚約 ¥6,000–8,000（雙人房）</div>
     </div>
   </div>
 
-  <!-- ===== 四大名物 ===== -->
-  <div class="section-header">
-    <div class="section-line"></div>
-    <div class="section-label">名古屋四大名物</div>
-    <div class="section-line"></div>
+  <div class="hotel-card">
+    <div class="hotel-icon" style="background:#E3F5EE;">🧱</div>
+    <div class="hotel-info">
+      <div class="hotel-period" style="color:#0A5035">8/7–8/8・1晚・樂高樂園</div>
+      <div class="hotel-name">LEGOLAND® Japan Hotel</div>
+      <div class="hotel-rec">官方唯一指定・必住體驗</div>
+      <div class="hotel-note">含早餐自助吧＋2日入場券套票・住客Early Entry・溫水泳池・創意工坊・樂高主題客房。1歲寶寶免費、6歲小孩在房間會驚喜尖叫。暑假必提前訂。</div>
+      <div class="hotel-budget" style="color:#0A5035">2日套票含早餐約 ¥50,000–70,000（整間房）</div>
+    </div>
   </div>
+
+  <div class="hotel-card">
+    <div class="hotel-icon" style="background:#FCE8E8;">♨️</div>
+    <div class="hotel-info">
+      <div class="hotel-period" style="color:#701515">8/12–8/13・1晚・下呂溫泉</div>
+      <div class="hotel-name">下呂溫泉旅館</div>
+      <div class="hotel-rec">推薦：水明館 或 下呂彩朝楽</div>
+      <div class="hotel-note">水明館：飛驒川沿岸・展望露天風呂・設施齊全・有兒童餐。下呂彩朝楽：兒童遊戲室・自助晚餐・貸切風呂・1歲帶著泡最方便。訂房請上じゃらん（jalan.net），有中文介面，請告知有1歲嬰兒，要求「貸切風呂」。</div>
+      <div class="hotel-budget" style="color:#701515">一泊二食 約 ¥30,000–45,000（兩大人，小孩另計）</div>
+    </div>
+  </div>
+
+  <div class="section-header"><div class="section-line"></div><div class="section-label">名古屋六大美食</div><div class="section-line"></div></div>
 
   <div class="food-section">
     <div class="food-grid">
-      <div class="food-item">
-        <div class="food-name">味噌カツ</div>
-        <div class="food-desc">濃厚八丁味噌醬汁・豬排炸得酥脆・名古屋最具代表性的名物</div>
-        <div class="food-where">📍 矢場とん・エスカ地下街（Day 1）</div>
-      </div>
-      <div class="food-item">
-        <div class="food-name">手羽先</div>
-        <div class="food-desc">山椒胡椒秘製烤雞翅・外脆內嫩・配啤酒絕配</div>
-        <div class="food-where">📍 世界の山ちゃん（Day 4 盆踊り後）</div>
-      </div>
-      <div class="food-item">
-        <div class="food-name">ひつまぶし</div>
-        <div class="food-desc">鰻魚飯三吃：原味→薬味→出汁茶漬け・需細細品味</div>
-        <div class="food-where">📍 まるや本店 名駅店（Day 6）</div>
-      </div>
-      <div class="food-item">
-        <div class="food-name">きしめん</div>
-        <div class="food-desc">扁平寬麵・柴魚高湯・月台上立食是名古屋特有文化</div>
-        <div class="food-where">📍 きしめん住よし・JR月台（Day 9）</div>
-      </div>
-      <div class="food-item">
-        <div class="food-name">小倉トースト</div>
-        <div class="food-desc">紅豆奶油吐司・配咖啡・只需付咖啡錢就有早餐附贈</div>
-        <div class="food-where">📍 喫茶リッチ（Day 4）・かこ花車本店（Day 5）</div>
-      </div>
-      <div class="food-item">
-        <div class="food-name">飛驒牛</div>
-        <div class="food-desc">下呂溫泉旅館會席料理・霜降和牛・旅程最奢侈的一餐</div>
-        <div class="food-where">📍 下呂溫泉旅館（Day 7–8）</div>
-      </div>
+      <div class="food-item"><div class="food-name">味噌カツ</div><div class="food-desc">濃厚八丁味噌醬汁・豬排炸得酥脆</div><div class="food-where">📍 矢場とん エスカ地下街（Day 1）</div></div>
+      <div class="food-item"><div class="food-name">手羽先</div><div class="food-desc">山椒胡椒秘製烤雞翅・外脆內嫩</div><div class="food-where">📍 世界の山ちゃん（Day 4 盆踊り後）</div></div>
+      <div class="food-item"><div class="food-name">ひつまぶし</div><div class="food-desc">鰻魚飯三吃：原味→薬味→出汁茶漬け</div><div class="food-where">📍 まるや本店 名駅店（Day 6）</div></div>
+      <div class="food-item"><div class="food-name">きしめん</div><div class="food-desc">扁平寬麵・柴魚高湯・月台立食文化</div><div class="food-where">📍 きしめん住よし JR月台（Day 9）</div></div>
+      <div class="food-item"><div class="food-name">小倉トースト</div><div class="food-desc">紅豆奶油吐司・只付咖啡錢就有早餐</div><div class="food-where">📍 喫茶リッチ（Day 4）・かこ花車本店（Day 5）</div></div>
+      <div class="food-item"><div class="food-name">飛驒牛會席</div><div class="food-desc">霜降和牛・旅程最奢侈的一餐</div><div class="food-where">📍 下呂溫泉旅館（Day 7–8）</div></div>
     </div>
   </div>
 
-  <!-- ===== 注意事項 ===== -->
-  <div class="section-header">
-    <div class="section-line"></div>
-    <div class="section-label">注意事項</div>
-    <div class="section-line"></div>
-  </div>
+  <div class="section-header"><div class="section-line"></div><div class="section-label">注意事項</div><div class="section-line"></div></div>
 
   <div class="tips-section">
     <div class="tips-title">行前注意與旅途小提醒</div>
-
     <div class="tips-group">
       <div class="tips-group-title">🎟 票券預購</div>
-      <div class="tip-item"><div class="tip-bullet"></div><div>樂高飯店套票：官網 legoland.jp 或 Klook，暑假非常搶手，越早越好</div></div>
+      <div class="tip-item"><div class="tip-bullet"></div><div>樂高飯店套票：官網 legoland.jp 或 Klook，暑假非常搶手，現在就訂</div></div>
       <div class="tip-item"><div class="tip-bullet"></div><div>吉卜力公園：Klook 預購，8月票額有限，現在就可以查詢</div></div>
       <div class="tip-item"><div class="tip-bullet"></div><div>名古屋港水族館：Klook 預購可省排隊，暑假期間9:30–20:00開放</div></div>
       <div class="tip-item"><div class="tip-bullet"></div><div>まるや本店：Tablecheck 線上訂位（中文介面），備註「1歲嬰兒同行」請安排座敷</div></div>
+      <div class="tip-item"><div class="tip-bullet"></div><div>下呂溫泉旅館：JR 特急ひだ指定席也要提前在 JR 官網或 Klook 預訂，夏季自由席可能無位</div></div>
     </div>
-
     <div class="tips-group">
       <div class="tips-group-title">🧸 帶 1 歲出遊</div>
       <div class="tip-item"><div class="tip-bullet"></div><div>推車全程攜帶，吉卜力公園腹地很大，沒有推車會非常累</div></div>
       <div class="tip-item"><div class="tip-bullet"></div><div>每天安排午睡時段（12:30–14:00），讓寶寶在推車或飯店休息</div></div>
-      <div class="tip-item"><div class="tip-bullet"></div><div>日本藥妝店（マツキヨ・ドラッグストア）紙尿布、嬰兒食品很齊全，不需帶太多</div></div>
+      <div class="tip-item"><div class="tip-bullet"></div><div>日本藥妝店紙尿布、嬰兒食品很齊全，不需帶太多</div></div>
+      <div class="tip-item"><div class="tip-bullet"></div><div>下呂旅館訂房請告知有1歲嬰兒，要求「貸切風呂」（家庭包場浴室）</div></div>
       <div class="tip-item"><div class="tip-bullet"></div><div>名古屋地鐵站多設有多功能廁所（おむつ替えあり），水族館與樂高飯店哺乳室完善</div></div>
-      <div class="tip-item"><div class="tip-bullet"></div><div>下呂旅館訂房時請告知有1歲嬰兒，要求「貸切風呂」（家庭包場浴室），安全方便</div></div>
     </div>
-
     <div class="tips-group">
       <div class="tips-group-title">🌡 8月名古屋夏季</div>
       <div class="tip-item"><div class="tip-bullet"></div><div>名古屋夏天非常炎熱，最高氣溫可達38°C，外出務必防曬、補水</div></div>
-      <div class="tip-item"><div class="tip-bullet"></div><div>大須商店街有拱廊遮陽，是夏天逛街最舒適的選擇</div></div>
-      <div class="tip-item"><div class="tip-bullet"></div><div>吉卜力公園在森林內，樹蔭較多但仍需注意中暑，帶冰涼巾與補水飲料</div></div>
-      <div class="tip-item"><div class="tip-bullet"></div><div>盆踊り在室外，建議穿透氣的浴衣，帶扇子與防蚊噴霧</div></div>
+      <div class="tip-item"><div class="tip-bullet"></div><div>午後雷陣雨常見，8/14 出門前先看天氣決定晴天或雨天路線</div></div>
+      <div class="tip-item"><div class="tip-bullet"></div><div>大須商店街有拱廊遮陽，夏天逛街最舒適</div></div>
+      <div class="tip-item"><div class="tip-bullet"></div><div>盆踊り在室外，建議穿透氣浴衣，帶扇子與防蚊噴霧</div></div>
     </div>
-
     <div class="tips-group">
       <div class="tips-group-title">🚇 交通提醒</div>
-      <div class="tip-item"><div class="tip-bullet"></div><div>建議購買「manaca」IC交通卡，地鐵、バス、青波線、リニモ全部通用</div></div>
-      <div class="tip-item"><div class="tip-bullet"></div><div>樂高→長島不需要租車，名鉄バスセンター（名古屋站旁）搭高速巴士直達，¥1,400/人</div></div>
-      <div class="tip-item"><div class="tip-bullet"></div><div>下呂溫泉搭 JR 特急ひだ，名古屋站出發，需買指定席（自由席夏季可能無位）</div></div>
-      <div class="tip-item"><div class="tip-bullet"></div><div>機場回名古屋站：μ-SKY 約28分，¥870/人，推車可上車</div></div>
+      <div class="tip-item"><div class="tip-bullet"></div><div>建議購買「manaca」IC交通卡，地鐵、巴士、青波線、リニモ全部通用</div></div>
+      <div class="tip-item"><div class="tip-bullet"></div><div>下呂溫泉搭 JR 特急ひだ，需買指定席</div></div>
+      <div class="tip-item"><div class="tip-bullet"></div><div>機場↔名古屋站：μ-SKY 約28分，¥870/人，推車可上車</div></div>
     </div>
-
     <div class="tips-group">
       <div class="tips-group-title">🧳 行李管理</div>
-      <div class="tip-item"><div class="tip-bullet"></div><div>大件行李全程放名古屋站飯店，移宿樂高和下呂時只帶小包（1–2天換洗衣物）</div></div>
-      <div class="tip-item"><div class="tip-bullet"></div><div>飯店寄放行李日文說法：「荷物を預けたいんですが」，也可用翻譯APP</div></div>
-      <div class="tip-item"><div class="tip-bullet"></div><div>採購伴手禮可用クロネコヤマト宅急便從飯店寄回台灣，約¥2,500–4,000/箱</div></div>
+      <div class="tip-item"><div class="tip-bullet"></div><div>大件行李全程放名古屋站飯店，移宿樂高和下呂時只帶小包</div></div>
+      <div class="tip-item"><div class="tip-bullet"></div><div>飯店寄放行李日文：「荷物を預けたいんですが」或用翻譯APP</div></div>
+      <div class="tip-item"><div class="tip-bullet"></div><div>採購伴手禮可用クロネコヤマト從飯店寄回台灣，約¥2,500–4,000/箱</div></div>
     </div>
-
     <div class="tips-group">
       <div class="tips-group-title">📱 實用 App</div>
-      <div class="tip-item"><div class="tip-bullet"></div><div>Google Maps 導航・Yahoo!乗換案内 查電車時刻・翻譯用 Google 翻譯相機功能</div></div>
+      <div class="tip-item"><div class="tip-bullet"></div><div>Google Maps 導航・Yahoo!乗換案内 查電車時刻・Google 翻譯相機功能</div></div>
       <div class="tip-item"><div class="tip-bullet"></div><div>Klook 購票・Tablecheck 訂位・じゃらん 訂旅館</div></div>
       <div class="tip-item"><div class="tip-bullet"></div><div>樂高樂園官方 App 可查即時等候時間，入園前先下載</div></div>
     </div>
@@ -976,19 +420,21 @@ footer {
 
 </div>
 
-<footer>
-  名古屋親子行程 2026年8月6日–15日・由 Claude 規劃整理
-</footer>
+<footer>名古屋親子行程 2026年8月6日–15日・由 Claude 規劃整理</footer>
 
 <script>
-function toggle(head) {
-  const card = head.closest('.day-card');
-  card.classList.toggle('open');
-}
+function toggle(head) { head.closest('.day-card').classList.toggle('open'); }
 function toggleAll() {
   const cards = document.querySelectorAll('.day-card');
   const allOpen = [...cards].every(c => c.classList.contains('open'));
   cards.forEach(c => allOpen ? c.classList.remove('open') : c.classList.add('open'));
+}
+function switchWeather(tab, plan) {
+  const box = tab.closest('.weather-box');
+  box.querySelectorAll('.weather-tab').forEach(t => t.classList.remove('active'));
+  box.querySelectorAll('.weather-plan').forEach(p => p.classList.remove('active'));
+  tab.classList.add('active');
+  box.querySelector('#plan-' + plan).classList.add('active');
 }
 </script>
 </body>
